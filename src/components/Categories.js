@@ -1,15 +1,15 @@
 import React from 'react';
-export default function Categories() {
+export default function Categories({ data }) {
     return (
-        <>
-            <p>Top Headlines
-            Business
-            Entertainment
-            General
-            Health
-            Science
-            Sports
-            Technology</p>
-        </>
+        <div className= "categories--container">
+            <span className = "active">Top Headlines</span>
+            <span>Business</span>
+            <span>Entertainment</span>
+            <span>General</span>
+            <span>Health</span>
+            <span>Science</span>
+            <span>Sports</span>
+            <span>Technology</span>
+        </div>
     )
 }

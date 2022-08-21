@@ -3,7 +3,6 @@ export default function NewsArticle({ data }) {
 
     return (
         <div className = "news" >
-
             <img className = "news--img"
                 src = { data.urlToImage }
                 alt = "Anderson Post"

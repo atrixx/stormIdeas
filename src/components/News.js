@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, { useContext, useState } from "react";
 import { NewsContext } from "../NewsContext";
 import NewsArticle from "./NewsArticle";
 
@@ -6,7 +6,6 @@ export default function News() {
     const { data } = useContext(NewsContext);
     const [newsCount, setNewsCount] = useState(9)
     const loadMoreNews = () => {
-        // console.log(data, 'dl')
         setNewsCount(data.length)
     }
 
@@ -21,7 +20,7 @@ export default function News() {
                 ))
                 : "Loading..."
             }
-            <div className='header'>
+            <div className='footer'>
                 <button
                     type="button"
                     className = 'footer--button'

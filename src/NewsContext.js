@@ -1,7 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 import axios from 'axios';
 
-
 export const NewsContext = createContext();
 
 export const NewsContextProvider = (props) => {
@@ -10,7 +9,7 @@ export const NewsContextProvider = (props) => {
 
    useEffect( () => {
       axios
-          .get(`https://newsapi.org/v2/top-headlines?country=gb&apiKey=${apiKey}`)
+          .get(`https://newsapi.org/v2/top-headlines/?country=gb&apiKey=${apiKey}`)
           .then( (response) => setData(response.data) )
           .catch( (error) => console.log(error) );
    }, []);

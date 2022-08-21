@@ -10,7 +10,7 @@ body {
     margin: 0 auto;
 }
 
-.header {
+.header, .footer {
     display: flex;
     /*align-items: center;*/
     justify-content: center;
@@ -164,9 +164,7 @@ body {
 
 .news--categories {
     display: flex;
-    width: auto;
     margin: 0 auto;
-    align-content: space-between;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -175,5 +173,19 @@ body {
     border-bottom: 1px solid #E7E7E7;
     border-top: 1px solid #E7E7E7;
     padding: 16px;
-    /*margin-right: 20px;*/
+
+}
+.categories--container {
+    /*display: flex;*/
+    margin: 0 auto;
+
+}
+.categories--container > span {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.active {
+    color: #F02F23;
+    text-decoration: underline;
 }
