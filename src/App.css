@@ -77,10 +77,6 @@ body {
 .footer--button {
     width: 150px;
     height: 34px;
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*align-items: flex-start;*/
-    /*gap: 10px;*/
     padding: 8px 32px;
     background: #FFFFFF;
     border-radius: 18px;
@@ -92,7 +88,12 @@ body {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     border: 1px solid #F02F23;
-
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.footer--button :hover {
+    background-color: #F02F23;
+    color: white;
 }
 .news {
     border-bottom: 1px solid #E7E7E7;;

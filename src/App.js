@@ -5,7 +5,6 @@ import './App.css';
 import { NewsContextProvider } from "./NewsContext"
 import News from "./components/News"
 import Categories from "./components/Categories"
-import LoadMore from "./components/LoadMore"
 
 function App() {
 
@@ -20,8 +19,6 @@ function App() {
         <NewsContextProvider>
             <News />
         </NewsContextProvider>
-        <LoadMore />
-
     </>
   );
 }
