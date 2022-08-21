@@ -1,9 +1,10 @@
-
 import '../App.css'
+import logo from "../img/logo.png"
+
 export default function Logo() {
     return (
-        <header className='header'>
-            <h1 className='header--logo'> Anderson Post </h1>
+        <header className='header--logo'>
+            <img src = { logo } alt ="Anderson Post "/>
         </header>
     )
 }

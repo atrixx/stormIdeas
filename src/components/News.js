@@ -7,7 +7,7 @@ export default function News() {
 
     console.log(data)
     return (
-        <div>
+        <div className = "news--container">
             { data
                 ? data.articles.map( (news) => (
                     <NewsArticle
@@ -15,7 +15,7 @@ export default function News() {
                         key = {news.url}
                     />
                 ))
-                : "Loading"
+                : "Loading..."
             }
         </div>
     )
