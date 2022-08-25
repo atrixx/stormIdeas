@@ -14,12 +14,13 @@ export const NewsContextProvider = (props) => {
           .catch( (error) => console.log(error) );
    }, []);
 
-   return (
+    return (
        <>
        <NewsContext.Provider value = {{ data }} >
           {props.children}
        </NewsContext.Provider>
        </>
    )
+
 };
 

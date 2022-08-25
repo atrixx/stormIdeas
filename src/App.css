@@ -4,15 +4,18 @@
     box-sizing:border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+p{
+    margin-bottom: 0.5rem;
+}
 body {
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
     margin: 0 auto;
 }
-
+ul {
+    list-style-type:none
+}
 .header, .footer {
     display: flex;
-    /*align-items: center;*/
     justify-content: center;
     padding: 20px 0;
     margin-bottom: 20px;
@@ -22,44 +25,30 @@ body {
       height: 22px;
       position: absolute;
  }
-
 .header--menu {
-    /*display: flex;*/
-    /*align-content: end;*/
-    /*align-items: flex-end;*/
-    /*justify-content: flex-end;*/
-    /*padding: 0 30px 0 850px;*/
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
     color: #2A2A2A;
-
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
     padding: 0;
     gap: 20px;
-
     position: absolute;
     width: 306px;
     height: 28px;
     right: 40px;
-    top: 17px;
+    top: 28px;
 }
 .header--item {
-    /*margin-right: 20px;*/
     padding: 4px;
-    /*width: 48px;*/
 }
 .header--button {
     width: 103px;
     height: 28px;
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*align-items: flex-start;*/
-    /*gap: 10px;*/
     padding: 4px 16px;
     background: #F02F23;
     border-radius: 14px;
@@ -72,8 +61,14 @@ body {
 .header--menu >img {
     width: 20px;
     height: 20px;
+    margin-bottom: 10px;
 }
-
+.header--icon > img{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 14px;
+    justify-content: flex-end;
+}
 .footer--button {
     width: 150px;
     height: 34px;
@@ -103,10 +98,9 @@ body {
     justify-content: center;
     grid-template-columns: 560px ;
 }
-
 .news--img {
     width: 560px;
-    padding: 20px 0 10px 0;
+    padding: 12px 0 10px 0;
 }
 .news--breaking {
     font-style: normal;
@@ -116,9 +110,8 @@ body {
     color: #2A2A2A;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    padding: 16px 0 0 0 ;
+    padding: 20px 0 0 0 ;
 }
-
 .news--name {
     font-style: normal;
     font-weight: 700;
@@ -128,7 +121,6 @@ body {
     text-transform: uppercase;
     color: #F02F23;
 }
-
 .news--title {
     font-style: normal;
     font-weight: 700;
@@ -137,10 +129,18 @@ body {
     color: #2A2A2A;
     padding: 8px 0;
 }
- a {
+ a,  a.nav-link {
      text-decoration: none;
+     color:#2A2A2A;
+ }
+ a.nav-link:hover {
+     color: #F02F23;
  }
 
+ a.active, a.nav-item .active  {
+     color: #F02F23;
+     text-decoration: underline 1px;
+ }
  .news--description {
      font-style: normal;
      font-weight: 400;
@@ -149,7 +149,6 @@ body {
      color: #565656;
      padding: 8px 0;
  }
-
  .news--author , .published {
      display: inline-block;
      font-style: normal;
@@ -159,33 +158,52 @@ body {
      color: #7C7C7C;
      opacity: 0.78;
      padding: 6px 0 16px 0;
-     margin-right: 10px
+     margin-right: 10px;
+     width:560px;
  }
-
-.news--categories {
+.categories {
     display: flex;
+    border-bottom: 1px solid #E7E7E7;
+    border-top: 1px solid #E7E7E7;
+    padding: 6px;
+}
+nav.categories--container, .nav--text {
+   /*display: flex;*/
     margin: 0 auto;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
     color: #2A2A2A;
-    border-bottom: 1px solid #E7E7E7;
-    border-top: 1px solid #E7E7E7;
-    padding: 16px;
-
 }
-.categories--container {
-    /*display: flex;*/
-    margin: 0 auto;
-
-}
-.categories--container > span {
+nav.categories--container > li{
     margin-right: 20px;
     cursor: pointer;
+    color: #2A2A2A;
 }
-
-.active {
-    color: #F02F23;
+.active{
     text-decoration: underline;
+    cursor: pointer;
+    color: #F02F23 !important;
+}
+.news--left > img {
+  width: 100px;
+}
+.right > p {
+ color: blue;
+}
+@media screen and (max-width: 480px) {
+    .news--container {
+        grid-template-columns: 360px
+    }
+    .news--img {
+        width: 360px;
+    }
+    .news--description {
+        display: none;
+    }
+
+    .header--menu {
+        display: none;
+    }
 }

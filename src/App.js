@@ -7,15 +7,18 @@ import News from "./components/News"
 import Categories from "./components/Categories"
 
 function App() {
+
   return (
     <>
     <div className= "header">
         <Logo />
         <HeaderMenu />
     </div>
-        <nav className = "news--categories"> <Categories /></nav>
-        <h3 className = "news--container news--breaking">Breaking News</h3>
         <NewsContextProvider>
+            <nav className = "categories">
+                <Categories />
+            </nav>
+        <h3 className = "news--container news--breaking">Breaking News</h3>
             <News />
         </NewsContextProvider>
     </>
