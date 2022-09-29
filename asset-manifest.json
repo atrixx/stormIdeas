@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/stormIdeas/static/css/main.9d637d01.css",
+    "main.js": "/stormIdeas/static/js/main.09941e09.js",
+    "index.html": "/stormIdeas/index.html",
+    "main.9d637d01.css.map": "/stormIdeas/static/css/main.9d637d01.css.map",
+    "main.09941e09.js.map": "/stormIdeas/static/js/main.09941e09.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d637d01.css",
+    "static/js/main.09941e09.js"
+  ]
+}
